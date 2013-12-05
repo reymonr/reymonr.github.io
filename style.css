@@ -1,0 +1,38 @@
+body {
+	width: auto;
+	height: auto;
+	margin: 25px;
+	padding: 20px;
+	background-color: black;
+}
+
+#isi {
+	font-family: cursive;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+}
+
+img {
+	border: 1px dotted green;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	font-weight: bold;
+	text-decoration: underline;
+	color: lime;
+}
+
+a:visited {
+	color: #fff;
+}
+
+p {
+	font-family: verdana;
+	font-size: 12px;
+	color: #fff;
+}
