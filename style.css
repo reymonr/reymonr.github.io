@@ -3,14 +3,14 @@ body {
 	height: auto;
 	margin: 25px;
 	padding: 20px;
-	background-color: black;
+	background-color: #fff;
 }
 
 #isi {
 	font-family: cursive;
 	font-size: 16px;
-	text-align: center;
-	color: #fff;
+	text-align: left;
+	color: #000;
 }
 
 img {
