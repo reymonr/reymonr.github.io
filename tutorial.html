@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>tutorial</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">STATIC SITE &amp; BLOG USING GATSBYJS</h1>
+
+<h3 id="toc_1">1. Setup Development Environment</h3>
+
+<h5 id="toc_2">1.1 Install Node.js and NPM</h5>
+
+<p>Node.js is an environment that can run JavaScript code outside of a web browser. Gatsby is built with Node.js. To get up and running with Gatsby, you&#39;ll need to have a recent version installed on your computer.</p>
+
+<p><em>Note: Gatsby&#39;s minimum supported Node.js version is Node 8, but feel free to use a more recent version.</em></p>
+
+<p>The instruction below is for Mac system:</p>
+
+<ol>
+<li>Open your Terminal.</li>
+<li>Run <code>brew update</code> to make sure you have the latest version of Homebrew.</li>
+<li>Run this command to install Node and npm in one go: <code>brew install node</code></li>
+</ol>
+
+<p>For Windows users, download <a href="https://nodejs.org/en/download/">Node.js installer</a> and follow the instructions.</p>
+
+<p>Once you have followed the installation steps, make sure everything was installed properly:</p>
+
+<p><strong>Check your Node.js installation</strong></p>
+
+<ol>
+<li>Open your terminal.</li>
+<li>Run <code>node --version</code> to check the node version and <code>npm --version</code> to check the npm version. Below is the example output:</li>
+</ol>
+
+<p><img src="images/node-version.png" alt="output of node and npm version!" title="node and npm version"></p>
+
+<p><strong>Install Git</strong></p>
+
+<p>You can use Git for Windows stand-alone installer. Below is the step by step:</p>
+
+<ol>
+<li>Download the latest <a href="https://gitforwindows.org/">Git for Windows Installer</a>.</li>
+<li>When you&#39;ve successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation. The default options are pretty sensible for most users.</li>
+<li>Open a Command Prompt (or Git Bash if during installation you elected not to use Git from the Windows Command Prompt).</li>
+<li>Run the following commands to configure your Git username and email using the following commands:</li>
+</ol>
+
+<p><img src="images/git-config.png" alt="git configuration!" title="set your name and email address"></p>
+
+<h3 id="toc_3">2. Install GatsbyJS</h3>
+
+<p>To use Gatsby we need to install the Gatsby CLI. The Gatsby CLI tool lets you quickly create new Gatsby-powered sites and run commands for developing Gatsby sites. It is a published npm package.</p>
+
+<p>The Gatsby CLI is availabile via npm and should be installed globally by running <code>npm install -g gatsby-cli</code>. Below is the output of installation:</p>
+
+<p><img src="images/install-gatsby.png" alt="install Gatsby CLI!" title="install Gatsby CLI"></p>
+
+<p><strong>Create New Gatsby Site</strong></p>
+
+<p>Now you are ready to use the Gatsby CLI tool to create your first Gatsby Site. Using the tool, you can download &quot;starters&quot; (partially built sites with some default configuration) to help you get moving faster on creating a certain type of site. You can also create an empty Gatsby site (this what we will do).</p>
+
+<p>To create a Gatsby site enter the following command:</p>
+
+<p><code>gatsby new myblog</code></p>
+
+<p>Below is the example output:</p>
+
+<p><img src="images/gatsby-create-site.png" alt="create a gatsby site!" title="create a gatsby site"></p>
+
+<p>After the site is created, open it with a Text Editor. Here i&#39;m using <a href="https://code.visualstudio.com/">Microsoft VSCode</a> text editor.</p>
+
+<p><img src="images/vscode.png" alt="vscode text editor!" title="vscode text editor"></p>
+
+<p>To view your site locally, simply run the following code:</p>
+
+<p><code>gatsby develop</code></p>
+
+<p>it will run the development server and you can open a new tab in your browser and navigate to <code>http://localhost:8000/</code>. Below is the example output:</p>
+
+<p><img src="images/local-site.png" alt="local site output!"></p>
+
+<h3 id="toc_4">3. Create Static Pages (About, Services)</h3>
+
+<p>Next, lets create a static page on our site. We will add two static pages, the About page and Services page.</p>
+
+<p><strong>Add About Page</strong></p>
+
+<ol>
+<li>Create a new file inside the <code>src/pages/</code> folder and named it <code>about.js</code>.</li>
+<li>Type the following code into the <code>about.js</code> file.</li>
+</ol>
+
+<div><pre class="line-numbers"><code class="language-javascript">import React from &quot;react&quot;
+    
+import Layout from &quot;../components/layout&quot;
+import SEO from &quot;../components/seo&quot;
+    
+const AboutPage = () =&gt; (
+  &lt;Layout&gt;
+    &lt;SEO title=&quot;About Us&quot; /&gt;
+    &lt;h1&gt;About Us&lt;/h1&gt;
+    &lt;p&gt;We are Web Developers.&lt;/p&gt;
+  &lt;/Layout&gt;
+)
+    
+export default AboutPage</code></pre></div>
+
+<ol>
+<li>Save the file, and try to open it in the browser and navigate to <code>http://localhost:8000/about</code>. If it success, you will see the following result:</li>
+</ol>
+
+<p><img src="images/about.png" alt="about page!"></p>
+
+<p><strong>Next</strong>. It&#39;s your turn to create the Services page using the same steps explained before.</p>
+
+<h3 id="toc_5">4. Create Components (Menu)</h3>
+
+<p>We will create a Menu Component. Follow the steps below to create a component:</p>
+
+<ol>
+<li>Create new file in <code>src/components/</code> folder and name it <code>menu.js</code>.</li>
+<li>Open the <code>menu.js</code> file and type the following code:</li>
+</ol>
+
+<div><pre class="line-numbers"><code class="language-javascript">import React from &#39;react&#39;
+import { Link } from &quot;gatsby&quot;
+    
+const Menu = () =&gt; (
+    &lt;div style={{ 
+        background: &#39;#f4f4f4&#39;,
+        paddingTop: &#39;10px&#39;
+     }}&gt;
+        &lt;ul style={{
+            listStyle: &#39;none&#39;,
+            display: &#39;flex&#39;,
+            justifyContent: &#39;space-evenly&#39;
+        }}&gt;
+            &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;Link to=&quot;/about&quot;&gt;About&lt;/Link&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;Link to=&quot;/services&quot;&gt;Services&lt;/Link&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;Link to=&quot;/blog&quot;&gt;Blog&lt;/Link&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+)
+    
+export default Menu</code></pre></div>
+
+<ol>
+<li>Save the file.</li>
+<li>Next, open and edit <code>src/components/layout.js</code> file. Add the <strong>menu</strong> component we just created. To add the component to the layout file, type these two lines of code, <code>import Menu from &quot;./menu&quot;</code> (line no 13) and <code>&lt;Menu /&gt;</code> (line no 30). The complete code of <code>layout.js</code> file:</li>
+</ol>
+
+<div><pre class="line-numbers"><code class="language-javascript">/**
+ * Layout component that queries for data
+ * with Gatsby&#39;s useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.org/docs/use-static-query/
+ */
+    
+import React from &quot;react&quot;
+import PropTypes from &quot;prop-types&quot;
+import { useStaticQuery, graphql } from &quot;gatsby&quot;
+    
+import Header from &quot;./header&quot;
+import Menu from &quot;./menu&quot;
+import &quot;./layout.css&quot;
+    
+const Layout = ({ children }) =&gt; {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+    
+  return (
+    &lt;&gt;
+      &lt;Header siteTitle={data.site.siteMetadata.title} /&gt;
+      &lt;Menu /&gt;
+      &lt;div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0px 1.0875rem 1.45rem`,
+          paddingTop: 0,
+        }}
+      &gt;
+        &lt;main&gt;{children}&lt;/main&gt;
+        &lt;footer&gt;
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          &lt;a href=&quot;https://www.gatsbyjs.org&quot;&gt;Gatsby&lt;/a&gt;
+        &lt;/footer&gt;
+      &lt;/div&gt;
+    &lt;/&gt;
+  )
+}
+    
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+    
+export default Layout</code></pre></div>
+
+<p>After adding the <code>Menu</code> component to the <code>layout.js</code> file, you can see a menu shown below the <code>Header</code> component.</p>
+
+<p><img src="images/menu.png" alt="menu component added before header!"></p>
+
+<p>Using the <code>Menu</code> component, you can navigate to <strong>Home page</strong>, <strong>About page</strong>, and <strong>Services page</strong>.</p>
+
+<h3 id="toc_6">5. Create Blog Post Using Markdown</h3>
+
+<p>To create a blog post, we will use the <a href="https://www.markdownguide.org/">Markdown</a> syntax. Markdown is a lightweight markup language with plain text formatting syntax. In order the blog post can be write using Markdown syntax, there are some installation and configuration needed. Below is the step by step.</p>
+
+<h5 id="toc_7">5.1 Install Plugins</h5>
+
+<p>There are three plugins need to install, write the command below to install the plugins.</p>
+
+<p><code>$ npm install gatsby-source-filesystem</code></p>
+
+<p><code>$ npm install gatsby-transformer-remark</code></p>
+
+<p><code>$ npm install gatsby-plugin-catch-links</code></p>
+
+<p>You can write the installation command in one line like below:</p>
+
+<p><code>npm install gatsby-source-filesystem gatsby-transformer-remark gatsby-plugin-catch-links</code></p>
+
+<p><img src="images/install-plugins.png" alt="about page!"></p>
+
+<h5 id="toc_8">5.2 Configure Plugins</h5>
+
+<p>To configure the plugins, open the file <code>gatsby-config.js</code>, and add the plugins we just installed. To add plugins in the configuration file, type the following code after <code>gatsby-plugin-sharp</code> configuration (line no 29):</p>
+
+<div><pre class="line-numbers"><code class="language-javascript">    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: `pages`
+      }
+    },
+    `gatsby-transformer-remark`,</code></pre></div>
+
+<p>The final code of your <code>gatsby-config.js</code> file will look like this:</p>
+
+<div><pre class="line-numbers"><code class="language-javascript">module.exports = {
+  siteMetadata: {
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: `pages`
+      }
+    },
+    `gatsby-transformer-remark`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
+  ],
+}
+</code></pre></div>
+
+<p><strong><em>Note</em></strong>: <em>the configuration code start from line no 30 down to 38.</em></p>
+
+<h5 id="toc_9">5.3 Create Blog Page</h5>
+
+<p>Follow the steps below to create a blog page using Markdown syntax.</p>
+
+<h6 id="toc_10">5.3.1 Create <code>Markdown</code> Blog Post</h6>
+
+<p>Create a folder inside <code>src/pages</code>. Use the following format to name the new folder: <strong>date-post-title</strong>. Example:</p>
+
+<p><code>2019-10-18-post-one</code></p>
+
+<p>Inside the <code>2019-10-18-post-one</code> folder, create a file name it: <code>index.md</code>. Your project folder should look like this:</p>
+
+<p><img src="images/blogpost-folder.png" alt="project folder structure!"></p>
+
+<p>Open the <code>index.md</code> file, and write the following code:</p>
+
+<div><pre class="line-numbers"><code class="language-none">---
+path: &quot;/post-one&quot;
+date: &quot;2019-10-18&quot;
+title: &quot;My First Blog Post&quot;
+author: &quot;John Doe&quot;
+---
+
+Hi there, welcome to my GatsbyJS blog. This is my first post.</code></pre></div>
+
+<h6 id="toc_11">5.3.2 Create Blog Post Page</h6>
+
+<p>Next we create a page to show the blog post. Start with create a new file in the <code>src/pages</code> folder and name it <code>blog.js</code>. Write the following code to <code>blog.js</code> file:</p>
+
+<div><pre class="line-numbers"><code class="language-javascript">import React from &quot;react&quot;
+import { Link } from &quot;gatsby&quot;
+
+import Layout from &quot;../components/layout&quot;
+import SEO from &quot;../components/seo&quot;
+
+const BlogPage = ({ data }) =&gt; (
+  &lt;Layout&gt;
+    &lt;SEO title=&quot;Blog&quot; /&gt;
+    &lt;h1&gt;Latest Posts&lt;/h1&gt;
+    {data.allMarkdownRemark.edges.map(post =&gt; (
+      &lt;div key={post.node.id}&gt;
+        &lt;h3&gt;{post.node.frontmatter.title}&lt;/h3&gt;
+        &lt;small&gt;
+          Posted by {post.node.frontmatter.author} on{&quot; &quot;}
+          {post.node.frontmatter.date}
+        &lt;/small&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;Link to={post.node.frontmatter.path}&gt;Read More&lt;/Link&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;hr /&gt;
+      &lt;/div&gt;
+    ))}
+  &lt;/Layout&gt;
+)
+
+// query using graphql to get blog posts
+export const pageQuery = graphql`
+  query BlogIndexQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            title
+            date
+            author
+          }
+        }
+      }
+    }
+  }
+`
+
+export default BlogPage</code></pre></div>
+
+<p>To view the Blog page, edit the <code>menu.js</code> component file add a link to the blog page.</p>
+
+<div><pre class="line-numbers"><code class="language-javascript">&lt;li&gt; &lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt; &lt;/li&gt;
+&lt;li&gt; &lt;Link to=&quot;/about&quot;&gt;About&lt;/Link&gt; &lt;/li&gt;
+&lt;li&gt; &lt;Link to=&quot;/services&quot;&gt;Services&lt;/Link&gt; &lt;/li&gt;
+&lt;li&gt; &lt;Link to=&quot;/blog&quot;&gt;Blog&lt;/Link&gt; &lt;/li&gt;</code></pre></div>
+
+<p>If everything is correct, you can see the <strong>Blog</strong> page and the blog post.</p>
+
+<p><img src="images/blog-page.png" alt="blog page!"></p>
+
+<p>You can add another blog post by following the instruction in <strong><em>Section 5.3.1</em></strong>.</p>
+
+<p><strong><em>Note</em></strong> <em>for now if you click the Read More link you will get an error, because we still not configure the</em> <code>gatsby-node.js</code> <em>file. We will do it later in Section 5.5</em>.</p>
+
+<h5 id="toc_12">5.4 Create Blog Template</h5>
+
+<p>The blog template is use for displaying a single blog post. To create a template, follow the instruction below:</p>
+
+<ol>
+<li>Create a folder name <code>templates</code> inside the <code>src/</code> folder.</li>
+<li>Create file inside the <code>src/templates/</code>, name it <code>blog-post.js</code>. Write the following code in <code>blog-post.js</code> template file.</li>
+</ol>
+
+<div><pre class="line-numbers"><code class="language-javascript">import React from &quot;react&quot;
+import { Link } from &quot;gatsby&quot;
+
+import Layout from &quot;../components/layout&quot;
+import SEO from &quot;../components/seo&quot;
+
+export default function Template({ data }) {
+  const post = data.markdownRemark
+
+  return (
+    &lt;Layout&gt;
+      &lt;SEO title=&quot;Blog Post&quot; /&gt;
+      &lt;div&gt;
+        &lt;Link to=&quot;/blog&quot;&gt;Go Back&lt;/Link&gt;
+        &lt;hr /&gt;
+        &lt;h1&gt;{post.frontmatter.title}&lt;/h1&gt;
+        &lt;h4&gt;
+          Posted by {post.frontmatter.author} on {post.frontmatter.date}
+        &lt;/h4&gt;
+        &lt;div dangerouslySetInnerHTML={{ __html: post.html }} /&gt;
+      &lt;/div&gt;
+    &lt;/Layout&gt;
+  )
+}
+
+// query to get a single post detail using graphql
+export const postQuery = graphql`
+  query BlogPostByPath($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        path
+        title
+        author
+        date
+      }
+    }
+  }
+`</code></pre></div>
+
+<h5 id="toc_13">5.5 Edit <code>gatsby-node.js</code> file</h5>
+
+<p>We need to edit the <code>gatsby-node.js</code> file to do mapping for the blog post path. Open the <code>gatsby-node.js</code> file and write the following code:</p>
+
+<div><pre class="line-numbers"><code class="language-javascript">const path = require(&quot;path&quot;)
+
+exports.createPages = ({ actions, graphql }) =&gt; {
+  const { createPage } = actions
+
+  const postTemplate = path.resolve(&quot;src/templates/blog-post.js&quot;)
+
+  return graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            html
+            id
+            frontmatter {
+              path
+              title
+              date
+              author
+            }
+          }
+        }
+      }
+    }
+  `).then(res =&gt; {
+    if (res.errors) {
+      return Promise.reject(res.errors)
+    }
+
+    res.data.allMarkdownRemark.edges.forEach(({ node }) =&gt; {
+      createPage({
+        path: node.frontmatter.path,
+        component: postTemplate,
+      })
+    })
+  })
+}</code></pre></div>
+
+<p>If everything is correct, you can access the blog post page by clicking the Read More link. The result will look like this:</p>
+
+<p><img src="images/blog-post-page.png" alt="blog post page!"></p>
+
+<p><strong>Note:</strong> <em>you may need to restart the development server.</em></p>
+
+<h3 id="toc_14">6. Push to GitHub</h3>
+
+<p>We will push our blog to GitHub before deploying it to Netlify. Follow the instructions below to push your website to GitHub.</p>
+
+<h6 id="toc_15">6.1 Create a GitHub Account</h6>
+
+<p>Navigate to GitHub and create an account (if you already have one, sign in to your account). To create an account, fill in the following form:</p>
+
+<p><img src="images/github-register.png" alt="github registration form!"></p>
+
+<p><strong>Note</strong> <em>don&#39;t forget to activate your account via link sent to your email.</em></p>
+
+<p>After your account created, sign in and create a new repository. To create a new repository, click the + icon on the right corner.</p>
+
+<p><img src="images/create-repo.png" alt="create new repository!"></p>
+
+<p>After your repository is created, you will see this page.</p>
+
+<p><img src="images/repo-summary.png" alt="repo summary!"></p>
+
+<p>Next, open your terminal and navigate to the project folder. Add all your files in the project folder by typing the following command:</p>
+
+<p><code>git init .</code></p>
+
+<p>Commit all your changes by typing this command:</p>
+
+<p><code>git init -m &#39;Your messages goes here&#39;</code></p>
+
+<p>Add a remote repository by typing the following command:</p>
+
+<p><code>git remote add origin https://github.com/reymonr/myblog.git</code></p>
+
+<p>And push all your files to GitHub by typing the following command:</p>
+
+<p><code>git push -u origin master</code></p>
+
+<p>After your files has been pushed, you can see all the files on your online repository at GitHub.</p>
+
+<p><img src="images/git-push.png" alt="git push!"></p>
+
+<h3 id="toc_16">7. Deploy to Netlify</h3>
+
+<p>Open <a href="https://www.netlify.com/">Netlify</a> website in your browser.</p>
+
+<p><img src="images/netlify2.png" alt="netlify.com!"></p>
+
+<p>Click the button <img src="images/netlify-get-started.png" alt="netlify get started!"> to deploy your website.</p>
+
+<h5 id="toc_17">7.1 Login using your GitHub account.</h5>
+
+<p><img src="images/netlify-github-login.png" alt="login using your github account!"></p>
+
+<p><em>Grant connection/authentication to your GitHub account for Netlify.</em></p>
+
+<h5 id="toc_18">7.2 Choose the repository you want to deploy.</h5>
+
+<p><img src="images/choose-repo.png" alt="choose repository!"></p>
+
+<h5 id="toc_19">7.3 Click the Deploy Site button, and Wait for the deployment setup to finish.</h5>
+
+<p><img src="images/deployment.png" alt="deployment settings!"></p>
+
+<h5 id="toc_20">7.4 After the deployment process completed, click the Domain name generated by Netlify to view your live Gatsby blog.</h5>
+
+<p><img src="images/result.png" alt="deployment result!"></p>
+
+<h2 id="toc_21">The end.</h2>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0}],string:{pattern:/(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,greedy:!0},"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":/[a-z0-9_]+(?=\()/i,number:/\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
+</script>
+
+<script type="text/javascript">
+Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,number:/\b-?(0x[\dA-Fa-f]+|0b[01]+|0o[0-7]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|Infinity)\b/,"function":/[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/i}),Prism.languages.insertBefore("javascript","keyword",{regex:{pattern:/(^|[^\/])\/(?!\/)(\[.+?]|\\.|[^\/\\\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,lookbehind:!0,greedy:!0}}),Prism.languages.insertBefore("javascript","class-name",{"template-string":{pattern:/`(?:\\\\|\\?[^\\])*?`/,greedy:!0,inside:{interpolation:{pattern:/\$\{[^}]+\}/,inside:{"interpolation-punctuation":{pattern:/^\$\{|\}$/,alias:"punctuation"},rest:Prism.languages.javascript}},string:/[\s\S]+/}}}),Prism.languages.markup&&Prism.languages.insertBefore("markup","tag",{script:{pattern:/(<script[\w\W]*?>)[\w\W]*?(?=<\/script>)/i,lookbehind:!0,inside:Prism.languages.javascript,alias:"language-javascript"}}),Prism.languages.js=Prism.languages.javascript;
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+
+</body>
+
+</html>
