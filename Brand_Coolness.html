@@ -1,0 +1,624 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Brand Coolness</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="eb347e30-9ad8-4719-824d-ccb1437095c7" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1553285991-4c74211f5097?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📱</span></div><h1 class="page-title">Brand Coolness</h1></header><div class="page-body"><div id="386ade8b-c697-4cb0-88ca-5d57a7e2aa42" class="column-list"><div id="a7f3f206-9f79-4d15-b4b3-37df28b70a4b" style="width:50%" class="column"><figure id="d3462f0f-1bfa-4d11-8a49-c62a6f83bc34"><div class="source"><a href="Brand%20Coolness/0022242919857698.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a0b2254-ae58-4e0e-8b1c-59da1537a0bb/0022242919857698.pdf</a></div></figure></div><div id="41794f35-89a4-4be0-96b7-6d6bc9e26ced" style="width:50%" class="column"><figure id="4b52b0db-b55e-445d-9de6-f85b5636a4e6"><div class="source"><a href="Brand%20Coolness/DS_10.1177_0022242919857698.docx">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/52fdfac6-7797-4bb3-9a94-e4721a1e5def/DS_10.1177_0022242919857698.docx</a></div></figure></div></div><hr id="e10385ad-f438-4e07-9455-e8b351ac1ca5"/><ul id="3e8b60de-cd41-47a0-8255-80876e14ef79" class="toggle"><li><details open=""><summary><strong>ABSTRACT</strong></summary><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="cd39f36d-aaf0-4e2f-b0dc-94dae378e779"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Marketers strive to create cool brands, but the literature does not offer a blueprint for what “brand coolness” means or what features characterize cool brands. This research uses a mixed-methods approach to conceptualize brand coolness and identify a set of characteristics typically associated with cool brands. Focus groups, depth interviews, and an essay study indicate that cool brands are perceived to be extraordinary, aesthetically appealing, energetic, high status, rebellious, original, authentic, subcultural, iconic, and popular. In nine quantitative studies (surveys and experiments), the authors develop scale items to reliably measure the component characteristics of brand coolness; show that brand coolness influences important outcome variables, including consumers’ attitudes toward, satisfaction with, intentions to talk about, and willingness to pay for the brand; and demonstrate how cool brands change over time. At first, most brands become cool to a small niche, at which point they are perceived to be more subcultural, rebellious, authentic, and original. Over time, some cool brands become adopted by the masses, at which point they are perceived to be more popular and iconic.</div></figure><pre id="e2188a18-c5cf-4b7e-b67c-6b8d07e05b62" class="code"><code>keywords:
+attitudes, authenticity, brands, coolness, niche, scale development, structural equation modeling</code></pre></details></li></ul><hr id="9fec7005-8333-4cd0-ab28-9bb032568195"/><ul id="e9395d97-34ff-4144-ad72-bc98b8dcf187" class="toggle"><li><details open=""><summary><strong>INTRODUCTION</strong></summary><ul id="a0e2f604-918f-4ce0-98c0-970bd4a24c06" class="bulleted-list"><li>consumers spend an enormous amount of money on cool brands.</li></ul><ul id="f9bf70b6-78ad-4946-a702-87b3656076ff" class="bulleted-list"><li>being cool has helped startup brands soar past established competitors</li></ul><ul id="7bf15e41-c452-49be-81f6-97e90c35403f" class="bulleted-list"><li>being uncool can sink even popular and well-funded brands</li></ul><ul id="0b079145-d39a-4041-b663-bc5b74098a85" class="bulleted-list"><li>what makes a brand cool? the answer is unclear</li></ul><ul id="7fea5f2e-1a5d-475d-ac43-2acd7858b90b" class="bulleted-list"><li>all literatures conducted before has not systematically identified the characteristics differentiating cool from uncool brands, nor has it identified how these characteristics change as brands move from being cool within a small subculture (niche cool) to the broader population (mass cool)</li></ul><ul id="00ec258e-36e9-44e4-9a8f-c61a31269fd0" class="bulleted-list"><li>through a series of studies, this research has generate and validate a measure of brand coolness that incorporates ten characteristics that distinguish cool brands from uncool brands</li></ul><ul id="214422bc-2647-434e-bd6a-48874165ab5e" class="bulleted-list"><li>in addition, this research also explore the nomological network related to brand coolness by identifying a set of variables that are related to, yet conceptually distinct from, coolness</li></ul><ul id="1d348668-a751-4ac5-b635-7bc1f6c22db8" class="bulleted-list"><li>moreover, this research also examine the subjective and dynamic nature of brand coolness</li></ul></details></li></ul><hr id="955b9eb6-e3ec-46ea-84a0-0f0d515dbf55"/><ul id="0463384d-2625-4277-8f1d-b23386d3adfb" class="toggle"><li><details open=""><summary><strong>CONCEPTUALIZING COOL</strong></summary><ul id="ce417c95-6d08-4768-94c2-5c17a8b79b7a" class="bulleted-list"><li>cool has many synonyms (hip, awesome, sweet, chill, badass, dope, etc) but is difficult to define</li></ul><ul id="d0a62382-43d1-4c96-851a-a1ea8f26077d" class="bulleted-list"><li>over 70 different ways (Web Appendix A) that coolness has been described and defined, illustrates how the literature has not converged on a definition, and highlights the need to establish a firmer, empirically grounded understanding of brand coolness</li></ul><ul id="41422e52-d7e2-4c5d-8623-ace57b254df2" class="bulleted-list"><li>in this study, they use the definition by Warren and Campbell&#x27;s definition of coolness:</li></ul><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="e338ca63-5786-4091-8a8d-3d4463332164"><div style="font-size:1.5em"><span class="icon">📝</span></div><div style="width:100%">a <em><strong>subjective</strong></em> and <em><strong>dynamic</strong></em>, socially constructed <em><strong>positive</strong></em> trait attributed to cultural objects inferred to be appropriately <em><strong>autonomous</strong></em></div></figure><ul id="67763868-0d94-4ade-9e59-9553f3ce429e" class="bulleted-list"><li>four essential features of coolness: <em><strong>subjective, positive valence, autonomy, and dynamic</strong></em></li></ul></details></li></ul><hr id="f8d4a919-ec0a-43a1-919c-8c3f8836ccdd"/><ul id="dcf3b0a0-cf7e-45c2-9975-3bbf64305276" class="toggle"><li><details open=""><summary><strong>UNANSWERED QUESTIONS</strong></summary><ol id="5b866504-8f85-468e-bd7f-71bbeff51c7b" class="numbered-list" start="1"><li>What characteristics are prototypical of cool brands?</li></ol><ol id="50af590f-cdce-4a7f-bd8e-347b677eabb4" class="numbered-list" start="2"><li>Can we develop a validated instrument to measure the component characteristics of cool brands?</li></ol><ol id="03831d07-befe-4491-973f-c2bb9f7777be" class="numbered-list" start="3"><li>What are the consequences of brand coolness?</li></ol><ol id="8235cc95-a807-4e47-941b-04ef7e33e605" class="numbered-list" start="4"><li>How do the characteristics and consequences of coolness change as brands move from niche cool to mass cool?</li></ol><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="cbd6bee8-75b9-47dd-9798-2a0df32bf669"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Answering all of these questions requires data that the literature does not provide.</div></figure></details></li></ul><hr id="7d4152ad-e112-4d07-946b-87f3cc74a74e"/><ul id="a3a1ccd4-ac42-4843-9776-e579f399ffc8" class="toggle"><li><details open=""><summary><strong>IDENTIFYING CHARACTERISTICS: QUALITATIVE RESEARCH</strong></summary><ul id="28ae8b2d-6074-41c9-a0e4-3e2a7ca44ce4" class="bulleted-list"><li>three qualitative studies conducted using: focus groups, depth interviews, and essays with consumers from North America and Europe</li></ul><ul id="cef94a3d-1849-429e-83c1-5595028363fa" class="bulleted-list"><li>the characteristics were identified by looking for similar patterns of responses across the different methods and cultures utilizing the ATLAS.ti software</li></ul><p id="02a8a75c-c843-4e5a-93d2-933ced5c1911" class=""><em>METHOD</em><div class="indented"><ul id="c50a3902-eac5-4658-9748-867da60d3509" class="toggle"><li><details open=""><summary>Focus Groups</summary><ul id="d2af4cdb-de88-4faf-ac2d-87952a9f7a92" class="bulleted-list"><li>four focus groups conducted in Western (United Kingdom), Eastern (Slovakia), and Southern (Portugal) Europe</li></ul><ul id="352f33e3-78f6-4c35-81fe-772d1d08ef58" class="bulleted-list"><li>eight participants in each group</li></ul><ul id="f663d396-4a2f-4791-b13f-4bd5178e9c5c" class="bulleted-list"><li>60 minutes</li></ul></details></li></ul><ul id="d0a01a54-8f1b-494b-a64d-47ffcf70b5ac" class="toggle"><li><details open=""><summary>Depth Interviews</summary><ul id="369630e3-cc6c-44de-8e9f-ae6e7241e2d1" class="bulleted-list"><li>30 depth interviews were conducted with consumers in Portugal</li></ul><ul id="a3de83f0-b2db-4317-8de2-4cc0e96e394c" class="bulleted-list"><li>the interviews followed a methodological procedure similar to McCracken [1988; see also Gubrium and Holstein (2001)]</li></ul><ul id="99de012d-390e-45eb-aff0-47d2b80a19ae" class="bulleted-list"><li>informants (respondents) were asked a series of grand tour questions</li></ul></details></li></ul><ul id="a7830ba8-0edc-4dcf-bad9-8667ea926f44" class="toggle"><li><details open=""><summary>Essays</summary><ul id="e89aceb8-c9a2-4bb7-9f53-aa24fb93d15f" class="bulleted-list"><li>75 students at a university in the United States</li></ul><ul id="8eb05b7f-b791-4148-80f7-f564a53edf7c" class="bulleted-list"><li>wrote two essays<ul id="74700869-05fc-4e6e-adac-28650b80bc9a" class="bulleted-list"><li>describing a brand they thought was cool</li></ul><ul id="3ad931c3-780d-476e-96eb-288eabddb72a" class="bulleted-list"><li>describing a brand they liked but did not think was cool</li></ul></li></ul></details></li></ul></div></p><p id="9cb47876-b47a-444a-a7fb-64cfe3d3c8f7" class=""><em>THEMES IN THE QUALITATIVE DATA</em><div class="indented"><ul id="90a5953c-415a-4001-8b0a-de0783180b46" class="toggle"><li><details open=""><summary>Ten themes, or characteristics, related to brand coolness emerged from the focus group, interview, and essay responses</summary><ol id="0bec6ac0-528e-41dd-b68f-dd8dd7a720ca" class="numbered-list" start="1"><li>useful/extraordinary</li></ol><ol id="731a115c-265c-434d-85e3-7dcd0d2ebbbe" class="numbered-list" start="2"><li>aesthetically appealing</li></ol><ol id="c215d309-dad8-4fbc-8ffa-aac7a7d581a2" class="numbered-list" start="3"><li>energetic</li></ol><ol id="ccac64e3-e9b4-405f-ad80-12fbb6515c61" class="numbered-list" start="4"><li>high status</li></ol><ol id="9adea924-7e21-4c18-869c-d45067dc1ce2" class="numbered-list" start="5"><li>original</li></ol><ol id="ba9f4009-adab-4d8d-a7b8-40239e17e913" class="numbered-list" start="6"><li>authentic</li></ol><ol id="ff1573a8-7ebe-4d96-9996-7d80697315ec" class="numbered-list" start="7"><li>rebellious</li></ol><ol id="8bd5238c-cad0-44d3-801b-67a8b6ea4743" class="numbered-list" start="8"><li>subcultural</li></ol><ol id="ab90a2f8-db14-48be-8893-6c4d66d5271e" class="numbered-list" start="9"><li>iconic</li></ol><ol id="e38331b0-1f24-49ad-a0b2-905c6dcf05e9" class="numbered-list" start="10"><li>popular</li></ol><p id="32076be3-b49c-438f-b4c3-41e0a04656b9" class="">
+</p></details></li></ul><figure id="6ef39404-5910-4a99-879a-676329811385" class="image"><a href="Brand%20Coolness/Screen_Shot_2020-04-30_at_16.44.31.png"><img style="width:768px" src="Brand%20Coolness/Screen_Shot_2020-04-30_at_16.44.31.png"/></a></figure></div></p><p id="5babad00-d105-4d05-a8a3-7a5e7ac17341" class=""><em>DIFFERENCES BETWEEN </em><em><mark class="highlight-blue">COOL</mark></em><em> AND </em><em><mark class="highlight-red">UNCOOL </mark></em><em>BRANDS</em><div class="indented"><ul id="c1a678f4-e460-43e6-adb5-77c989c907c0" class="bulleted-list"><li>iconic (73% vs 8%) - symbolize an important value, belief, or memory (only 8% of uncool brands were described as iconic)</li></ul><ul id="505bce91-e1da-4f77-9f3f-c225a795f49e" class="bulleted-list"><li>extraordinary or useful (76% vs 71%) - this did not distinguish cool from uncool brands, as respondents also considered most uncool brands useful (71%)</li></ul><ul id="751b287b-4425-4b99-a0c5-d2e1c031d893" class="bulleted-list"><li>subcultural (44% vs 7%)</li></ul><ul id="f9500890-eea0-4c2a-8a0c-3e2e5b6fe775" class="bulleted-list"><li>original (33% vs 4%)</li></ul><ul id="6631f9e3-4ec7-433d-a43a-3944235acb91" class="bulleted-list"><li>aesthetically appealing (25% vs 4%)</li></ul><ul id="198178f5-a3a6-43e0-b214-20969695d185" class="bulleted-list"><li>popular (17% vs 4%)</li></ul><ul id="8ff57d97-48b4-4f69-b472-e579066320b1" class="bulleted-list"><li>high status (15% vs 4%)</li></ul><ul id="1f6a9de5-1b75-4f2b-8427-5838ec3de25a" class="bulleted-list"><li>energetic (8% vs 0%)</li></ul></div></p><p id="490b679d-680b-456a-b107-e34dbb4a36c0" class=""><em>THEMES ABSENT IN THE QUALITATIVE DATA</em><div class="indented"><ul id="fcbbc0ce-ee7c-4c8e-967e-3786b613f8b0" class="bulleted-list"><li>cultural knowledge</li></ul><ul id="68dc434f-f2a6-4dfa-8a14-ef99ca96a9e3" class="bulleted-list"><li>emotional concealment, friendliness, and competence</li></ul></div></p></details></li></ul><hr id="bafe0628-1fc3-4b77-bfef-8eefdc870e79"/><ul id="06f13b89-9a50-49d9-9dc8-e3854bfc507b" class="toggle"><li><details open=""><summary><strong>STRUCTURAL AND NOMOLOGICAL MODELING: QUANTITATIVE RESEARCH</strong></summary><ul id="bc494aec-dd12-43bf-94c4-26e13896e3b3" class="bulleted-list"><li>eight survey studies were conducted to identify the higher-order structure of the characteristics of brand coolness that emerged in the qualitative research and to test their nomological relationship with related constructs</li></ul><ul id="1c3671ef-e690-4888-90e2-bb6ffabea51c" class="bulleted-list"><li>each study asked respondents to evaluate a brand that they consider cool, a brand that they do not consider cool, or both</li></ul><ul id="19ac1dbc-a33d-45fc-9394-05f87e26d38b" class="bulleted-list"><li>the first 4 studies were pretests, in which they developed and refined the measures for the structural and nomological models</li></ul><ul id="d78f3185-a6f4-4edb-94d7-a1755530f46b" class="bulleted-list"><li>study 5 purposes:<ul id="9b0e53d7-620e-4724-82d3-57d63af29449" class="bulleted-list"><li>confirmed the structural measurement model for the ten characteristics associated with brand coolness</li></ul><ul id="dc93b138-1bc3-4f9f-9f90-c03921252bbf" class="bulleted-list"><li>confirmed that all ten characteristics were more closely associated with cool brands than uncool brands</li></ul><ul id="e6997d80-8c12-4c3f-a996-937e0d066e11" class="bulleted-list"><li>tested the nomological relationship between brand coolness and related constructs, including brand personality, SBC, brand love, brand attitude, WTP fro the brand, and intentions to spread WOM about the brand</li></ul></li></ul><ul id="40ad93a7-1b79-4373-8b3b-a971b4f3760b" class="bulleted-list"><li>study 6 improved the measure of brand coolness by developing items that better capture the extent to which brand seems extraordinary rather than merely useful</li></ul><ul id="3dea73e1-b34e-467f-802f-28823f1a8a63" class="bulleted-list"><li>study 7 used a purely confirmatory design to replicate the results of study 6</li></ul><ul id="3a1fd48f-0281-4af4-a23d-24fde6bfcfae" class="bulleted-list"><li>study 8 examined the dynamic and subjective nature of brand coolness by testing how the characteristics and consequences differ between niche cool brands, mass cool brands, and uncool brands within a subculture of urban streetwear enthusiasts</li></ul><ul id="a7f3343e-b008-4aff-b746-f02cfda1fcd6" class="toggle"><li><details open=""><summary><em>METHOD</em></summary><ul id="0c07ceb0-3845-4113-aa94-b18ea06e17b9" class="bulleted-list"><li>samples = recruited U.S. consumers from a nationally representative online survey panel<ul id="5f27edf3-d4f7-4c32-9016-64365068fb8d" class="bulleted-list"><li>study 5 (N = 315; 50% male; modal age = 42)</li></ul><ul id="a0868aac-59e6-47ad-88f2-9edd9bfd9900" class="bulleted-list"><li>study 6 (N = 315; 47% male; modal age = 25-30)</li></ul><ul id="11f8157d-5abf-4e98-aa26-8b4719fae279" class="bulleted-list"><li>study 7 (recruited participants from Amazon&#x27;s Mechanical Turk (MTurk; N = 405; 58% male; modal age 25-30 years; all located in the United States)</li></ul><ul id="1f70ead8-11bf-4bd1-96c4-e15ea330a80b" class="bulleted-list"><li>study 8 (recruited 148 street-wear fashion enthusiasts by offering a Gold Award to readers of the Reddit board r/streetwear who completed the survey<ul id="67f219b2-8793-428f-be5a-d2f5806b2a74" class="bulleted-list"><li>mostly young (average age = 19 years; range = 13-41 years) and male (93%) but was racially diverse (53% white, 27% Asian, 5% Hispanic, 3% Black)</li></ul></li></ul></li></ul><ul id="d0defc9d-4e81-4ed8-aae0-9b1e2fd2f99f" class="bulleted-list"><li>brand nominations<ul id="1bc8c20f-5d80-415b-b30b-a68957df9279" class="bulleted-list"><li>each study, participants nominated and evaluated one or more brands</li></ul></li></ul><ul id="d1a5770c-f8d1-4f30-a61a-85cb671e94f8" class="bulleted-list"><li>measuring cool characteristics<ul id="e333f53a-5a10-4907-8308-fa1612e08d6a" class="bulleted-list"><li>after participants nominated the brand(s), they asked to rate them (order counterbalanced) on a series of five-point &quot;agree-disagree&quot; scale items</li></ul></li></ul><ul id="d07082bf-cc48-4753-989c-26291ece6ce2" class="bulleted-list"><li>measuring related constructs<ul id="0ad2a6de-d890-48dc-a6f3-499d60b90eb5" class="bulleted-list"><li>measured various constructs that the literature suggests might be related to brand coolness<ul id="81757f52-3fa9-4e0c-a020-7e0f742590b0" class="bulleted-list"><li>studies 1-4<ol id="0cb6d993-9925-421b-836c-d06bb4badff2" class="numbered-list" start="1"><li>brand love</li></ol><ol id="1e85f74a-833c-4905-85b3-bb6d1958b1e1" class="numbered-list" start="2"><li>SBC</li></ol><ol id="473bc064-b0a9-4fd2-8336-b8bef34ba3d3" class="numbered-list" start="3"><li>WOM related to the brand</li></ol><ol id="e17bec69-dde7-4340-8a17-6b998a018a61" class="numbered-list" start="4"><li>WTP for the brand</li></ol></li></ul><ul id="b9428ac1-bdc2-498d-b5fe-b07269563b2a" class="bulleted-list"><li>studies 5,7,8<ul id="19332334-a3ea-4b4d-abcf-fc375f892e66" class="bulleted-list"><li>brand attitudes</li></ul></li></ul><ul id="f53a1b3e-8246-4239-b543-078281942cd5" class="bulleted-list"><li>studies 5,7<ul id="8a674ef0-0685-420f-8002-d9bf9e3a9d0e" class="bulleted-list"><li>five dimensions of brand personality (ruggedness, excitement, sophistication, competence, and sincerity)</li></ul></li></ul><ul id="921f837f-e019-4b81-8cbe-41ac2f6fa8a1" class="bulleted-list"><li>studies 7,8<ul id="407bf65a-2d4a-4047-9937-2c48342b261f" class="bulleted-list"><li>participants had been exposed to the brand</li></ul><ul id="fa7b8506-835f-4d58-8d57-e364242a0c30" class="bulleted-list"><li>the brand is familiar</li></ul><ul id="40bb1255-b0d9-40bf-a2f8-c0c3158201be" class="bulleted-list"><li>the brand commands a price premium</li></ul></li></ul><ul id="4cb7298e-f43f-4715-a74f-72c4921770a6" class="bulleted-list"><li>study 5<ul id="8e441b0a-6a91-4f34-8421-6ed0f0059c00" class="bulleted-list"><li>satisfaction</li></ul><ul id="8cdb38c0-3ef7-4c3f-a817-1a860ebcc8d2" class="bulleted-list"><li>pride</li></ul></li></ul></li></ul></li></ul><ul id="9f7b8f25-e850-42e9-b67b-a6bf62cec95f" class="bulleted-list"><li>manipulation checks<ul id="e5420587-c699-4c21-bec4-42b6f91fc885" class="bulleted-list"><li>studies 6-8 asked participants to directly rate the extent to which they personally consider the brands cool</li></ul><ul id="9da37f40-cf21-4580-b270-1ff6fa6db24f" class="bulleted-list"><li>studies 7 and 8 also measured the extent to which participants believe that other people consider the brand cool</li></ul><ul id="58372a73-9e55-4e61-9e2a-318fcf94019d" class="bulleted-list"><li>participants were asked to indicate how the brand&#x27;s coolness has changed in the past and how they expect it to change in the future</li></ul></li></ul><ul id="2fefe581-f455-423c-8bc6-3402aee39fdd" class="bulleted-list"><li>individual difference measures<ul id="4dcb56e3-7d5c-469a-be91-d6d7d98fa06f" class="bulleted-list"><li>study 8<ul id="ce147e20-1560-401d-baf8-eec57245bae1" class="bulleted-list"><li>uniqueness</li></ul><ul id="219e0847-56ce-4086-931b-86e2180e2b3b" class="bulleted-list"><li>innovativeness</li></ul><ul id="d96107cd-8a08-4061-885d-92545fd29c8b" class="bulleted-list"><li>subjective expertise in fashion</li></ul><ul id="e9c93229-2693-45f1-b528-f33c5511040f" class="bulleted-list"><li>experience reading and posting on the r/streetwear forum</li></ul></li></ul><ul id="c0f16235-07c6-4b6e-b9a9-f1e15b6ced47" class="bulleted-list"><li>studies 5-8<ul id="bd2e5f5a-826d-462d-9229-418e4f128d7f" class="bulleted-list"><li>demographic variables (age, gender, native language)</li></ul></li></ul><ul id="14b69630-fbb1-421f-bd8a-2be96611d433" class="bulleted-list"><li>studies 7 and 8<ul id="065e38cf-cc0c-4216-a761-0452b2cc48a7" class="bulleted-list"><li>including theoretically unrelated &quot;marker variables&quot; for a methods factor test</li></ul></li></ul></li></ul></details></li></ul><ul id="f0412664-3ddc-406a-848a-93d663eae854" class="toggle"><li><details open=""><summary><em>MEASUREMENT MODEL OF BRAND COOLNESS</em></summary><ul id="184076e9-800c-41fd-99c9-17e7418b0f1e" class="bulleted-list"><li>using exploratory factor analysis (studies 1-4)</li></ul><ul id="0a62f033-617f-44fb-a5bc-19f3f249ff44" class="bulleted-list"><li>confirmatory factor analysis - CFA (studies 5-8)</li></ul><ul id="330b27a7-9351-4735-a4b8-038960823961" class="bulleted-list"><li>pretests were used to eliminate or replace items that either did not load highly onto the factor they were intended to measure or that cross-loaded onto multiple factors</li></ul><ul id="1afcb211-fe8c-4725-a935-e2eda9d46583" class="bulleted-list"><li>studies 5-8 used to confirm the final model</li></ul><ul id="f936e79b-3d1f-4625-9d2c-5d0cf5e8dcf4" class="bulleted-list"><li>the research used reflective instead of a formative model at each level for two reasons<ol id="7c5cdbd9-cbcb-42bb-965d-437c7682408b" class="numbered-list" start="1"><li>the logic underlying reflective models better fits the conceptualization of brand coolness</li></ol><ol id="500d8501-459d-440a-bf62-57e2cbd5e530" class="numbered-list" start="2"><li>the coefficients in formative models can vary with the number and structure of the measures and factors used</li></ol></li></ul><ul id="ea2fa1e1-f337-4b9e-9751-c2f3fbe7cfed" class="bulleted-list"><li><strong>Figure 2</strong> shows the final model with brand coolness consisting of two higher-order factors, which called desirability and positive autonomy, along with five first-order factors</li></ul><ul id="721fc3bc-fe48-4616-b0ce-7ab39f75574f" class="bulleted-list"><li><strong>Table 4</strong> reveals that factors and model structure were stable across all the studies and samples, with a few small differences</li></ul><ul id="2309a7d4-5bd5-4cc5-ab46-18b1beba85f4" class="bulleted-list"><li>the goodness-of-fit indices also showed an excellent fit across all of the studies and subsamples</li></ul></details></li></ul><ul id="3a3c35f1-abb4-40c9-a152-04a46cb6c0a4" class="toggle"><li><details open=""><summary><em>COMPARING COOL WITH UNCOOL BRANDS</em></summary><ul id="1271846d-160b-432e-912c-265806eeb844" class="bulleted-list"><li>Table 4 shows the characteristics of brand coolness in the model that reliably distinguished cool from uncool brands</li></ul><ul id="8da1d843-ae86-4ca3-a8f5-8c50af0e8c59" class="bulleted-list"><li>the brands that consumers most frequently selected as being cool included:<ul id="b07aafc2-6394-456f-8088-50e7dd00fe5e" class="bulleted-list"><li>Apple, Nike, Samsung, Under Armour, Adidas</li></ul></li></ul><ul id="617d945f-8410-48a6-b818-4b542f759a6e" class="bulleted-list"><li>different participants referenced many of these same brands as being uncool, because they perceived the brands to be lower status, less subcultural, and less rebellious:<ul id="03fdb223-6e35-4516-a5d3-19b68a45456a" class="bulleted-list"><li>Apple, Nike, Samsung, Adidas, Microsoft, Reebok, Old Navy, Walmart, Crocs</li></ul></li></ul><ul id="a67b1106-eb55-43a9-968f-82cfbdd369e1" class="bulleted-list"><li>consumers in studies 5-7 differed about which brands were cool and uncool confirms the subjective nature of coolness, especially when looking across a diverse sample of consumers</li></ul></details></li></ul><ul id="8e2bd30d-72e8-4c4f-baed-9fbbba56d938" class="toggle"><li><details open=""><summary><em>ARE COOL BRANDS EXTRAORDINARY OR MERELY USEFUL?</em></summary><ul id="1a773b33-605c-46ff-9356-41d99b4439d7" class="bulleted-list"><li>study 6 tested whether the model and scale would be conceptually and empirically stronger if the first characteristics measured how extraordinary the brand was, as opposed to measuring the extent to which the brand seemed useful</li></ul><ul id="ce17600f-e906-4bc8-8309-75bb00e04f4b" class="bulleted-list"><li>the new four-item models were superior or equal to those for the old-three item models</li></ul><ul id="7acf0d1c-c2ef-48ec-85fd-f494c07058fe" class="bulleted-list"><li>the structural coefficients from the first-order useful/extraordinary factor to the second-order desirability factor were higher with the new four items than with the old three items</li></ul></details></li></ul><ul id="955d3353-8c8a-4241-a6ea-36a1d63665f3" class="toggle"><li><details open=""><summary><em>DISCRIMINANT VALIDITY OF BRAND COOLNESS FROM CONCEPTUALLY RELATED CONSTRUCTS</em></summary><ul id="d3433080-1167-4c5f-b955-b49533512912" class="bulleted-list"><li>theoretical distinctions<ul id="a507d05b-e8e5-4fab-a580-8f5796f60669" class="bulleted-list"><li>brand coolness should be related to, but conceptually distinct from</li></ul><ul id="17266e51-5fa3-4b8f-a3b5-9a7848dde74d" class="bulleted-list"><li>brand coolness should also be discriminable from brand attitudes, because there is something extra that makes an object cool rather than merely positive</li></ul></li></ul><ul id="92c9136f-7a2f-49eb-91e5-6c7d4c418d64" class="bulleted-list"><li>empirical discrimination<ul id="970ac1c8-3cfe-469a-ba99-3249a969f5c9" class="bulleted-list"><li>discriminant validity were tested by estimating the disattenuated, latent psi correlations between multiple pairs of variables to test whether their 95% confidence intervals fell significantly below 1.0</li></ul></li></ul></details></li></ul><ul id="48b12eb8-b181-4ad3-bb46-f96dcbfa3eb6" class="toggle"><li><details open=""><summary><em>CORRELATES, CONSEQUENCES, AND MEDIATION</em></summary><ul id="2a37a4d0-d612-4d5c-996d-633a7efda964" class="bulleted-list"><li>theoretical correlates: brand personality<ul id="c1a3c860-aa04-4ae9-b7fc-2c0168f32696" class="bulleted-list"><li>brand personality is the set of human characteristics associated with a brand</li></ul><ul id="a0a6b637-39bc-4e5c-9b27-6fc72cf5de5c" class="bulleted-list"><li>serves a symbolic or self-expressive function for consumers, and it consists of five core dimensions<ul id="6c77b91b-f4b2-4ca5-a490-850586f21bf2" class="bulleted-list"><li>sophistication</li></ul><ul id="e4c09d22-21bd-4968-b382-a43d9b220d90" class="bulleted-list"><li>competence</li></ul><ul id="2681b76e-c01b-4207-b62a-1993626a386c" class="bulleted-list"><li>ruggedness</li></ul><ul id="6c8a2c38-bb03-4de9-9ab6-42aacf926103" class="bulleted-list"><li>excitement</li></ul><ul id="234f9b6e-2d9f-476d-88d0-898b9ea40bd0" class="bulleted-list"><li>sincerity</li></ul></li></ul><ul id="fa36bb62-1f5b-432b-bd1f-e3d8f6c8b213" class="bulleted-list"><li>brand personality perceptions should make that brand seem more, or less, cool, and they thus serve as antecedents of overall perceived brand coolness</li></ul><ul id="d0683635-3256-424c-afb1-6f613d056c56" class="bulleted-list"><li>multiple marketing and sociocultural elements (communications content, choice of endorsers) that shape these brand personality perceptions should also simultaneously shape the perceived coolness of the brand</li></ul><ul id="d84b2875-39b1-460f-aeb3-1e10b50345fa" class="bulleted-list"><li>difficult to empirically determine which perceptual changes came first</li></ul></li></ul><ul id="5f471869-c090-470a-8dc4-a9cf8218a666" class="bulleted-list"><li>theoretical consequences<ul id="59e74a93-f04c-4163-8dac-a650b3ee2609" class="bulleted-list"><li>nomological model also estimated the effects of overall brand coolness on several different dependent variables<ul id="16eb666f-faf2-452b-bf47-13a30b6c1de1" class="bulleted-list"><li>SBC</li></ul><ul id="0625e4db-5f1a-4049-ae25-4480663486a6" class="bulleted-list"><li>brand love</li></ul><ul id="b2edcf2e-14f8-4992-aa47-bea0ad51601a" class="bulleted-list"><li>WTP</li></ul><ul id="13842cd4-73e2-4bd1-ada1-7c81046591b4" class="bulleted-list"><li>willingness to spread WOM</li></ul><ul id="efaf18ab-5027-48b8-96fb-e8cb63690230" class="bulleted-list"><li>brand attitudes</li></ul><ul id="6dca0a89-1743-48c4-8c49-bed8f1dfd9e6" class="bulleted-list"><li>brand familiarity</li></ul><ul id="65e94c28-f455-473b-a1eb-c5ec3e7a7916" class="bulleted-list"><li>brand exposure</li></ul><ul id="77ba3866-bd02-4702-b480-3f10180af700" class="bulleted-list"><li>whether the brand commands a price premium</li></ul><ul id="6fa7edee-7015-4197-b8ab-e32b16b7136c" class="bulleted-list"><li>satisfaction</li></ul><ul id="0f801af0-1dff-44c1-a34d-e3dfa241e944" class="bulleted-list"><li>delight</li></ul><ul id="2d4a62ac-27b2-4c78-aac3-59b33bf81759" class="bulleted-list"><li>pride</li></ul></li></ul><ul id="1ffdb6d9-4efc-43dd-bbf8-1a75e1e78986" class="bulleted-list"><li>consumers view coolness as a desirable trait</li></ul><ul id="1b7b1f80-54db-43c4-b3db-d3499c7faa88" class="bulleted-list"><li>brand coolness includes multiple characteristics that consumer consider desirable<ul id="cc3cc71e-5362-47fe-8e20-1c03b76c7430" class="bulleted-list"><li>hypothesis: brand coolness should predict consumers&#x27; overall attitude toward the brand, and include brand attitude valence as a consequence of brand coolness</li></ul><ul id="cc89cb9c-cf25-42e9-bd75-2eb08a4f5deb" class="bulleted-list"><li>brand coolness should also increase several other types of distinct positive feelings toward the brand</li></ul></li></ul><ul id="ad47ab49-d12a-4a81-9922-181861aa938a" class="bulleted-list"><li>brand coolness also has components that are value-expressive in nature, including positive autonomy, rebellion, high status, subcultural appeal, and iconic symbolism<ul id="bcc40f7b-1bac-4693-a735-f7f30c8a1647" class="bulleted-list"><li>hypothesis: brand coolness will strengthen SBC because SBC increases as a brand&#x27;s symbolic aspects become more consistent with a consumer&#x27;s aspirational reference groups</li></ul></li></ul><ul id="805a1664-f527-4427-8c40-1f80a15db202" class="bulleted-list"><li>both SBC and brand love tend to increase consumers&#x27; WTP for and likelihood of discussing (WOM) a brand</li></ul></li></ul><ul id="9263b855-dfd2-4337-ae65-e5f3bc34317f" class="bulleted-list"><li>result of nomological models<ul id="37a07cc7-37c8-4b95-86d4-ebd1a59a4aa5" class="bulleted-list"><li>the predictions tested by modeling overall (higher-order) brand coolness as being correlated with the five dimensions of brand personality and as leading to a set of consequences slightly depending on which consequence variables measured in the studies</li></ul><ul id="2c969234-5e18-494c-b30b-747bee7bf87b" class="bulleted-list"><li>the model fit was satisfactory</li></ul><ul id="f4d306a8-3a86-4d4a-a0c2-deefd45ca489" class="bulleted-list"><li>higher-order brand coolness significantly predicted the measured consequence variables, including brand love, SBC, brand attitude, WTP,WOM, brand familiarity, brand exposure, brand price premium, delight, satisfaction, and pride</li></ul></li></ul><ul id="088f3103-0fb0-45a7-a052-d339a6956bec" class="bulleted-list"><li>variance explained by brand coolness<ul id="2516d409-df24-4e8b-bea0-7b5e74a7642f" class="bulleted-list"><li>how much variance higher-order brand coolness explained in the outcome variables (brand attitude, WTP, and WOM) relative to more established constructs in the literature, including brand love and SBC</li></ul><ul id="d3c5debf-3491-44a5-84bf-b5b7f939e410" class="bulleted-list"><li>help marketers predict outcomes that they care about, such as the extent to which consumers hold a positive attitude toward and are willing to pay for the brand</li></ul><ul id="3dbf75c6-be9e-470f-a655-e1df3df8b033" class="bulleted-list"><li>brand coolness variances:<ul id="8fc91fc6-79c7-4f6a-84c5-e0aba480c47e" class="bulleted-list"><li>32%-70% to brand attitudes</li></ul><ul id="ea2b313d-b78a-4da8-bcf9-7453e3c7e8ee" class="bulleted-list"><li>26%-85% to brand love</li></ul><ul id="2589df26-5365-43f4-ab2c-933b9ee74e81" class="bulleted-list"><li>19%-67% to SBC</li></ul><ul id="14aa791a-13ab-4ac7-a079-060dcf3c3843" class="bulleted-list"><li>32%-57% to WOM</li></ul><ul id="ba201690-4ea1-467a-8c77-07d07fc252a8" class="bulleted-list"><li>32%-79% to WTP</li></ul><ul id="5d05dc40-748f-4e66-8bae-c96521bdad06" class="bulleted-list"><li>brand love (WOM: 25%-74%; WTP: 29%-86%)</li></ul><ul id="ae5df39b-e6f0-4911-92c2-19ac5e88b898" class="bulleted-list"><li>SBC (WOM: 26%-79%; WTP:29%-84%)</li></ul></li></ul><ul id="56cc5357-3103-46ec-b371-89e9b320e606" class="bulleted-list"><li>Table 4 shows how the mean levels of brands on these outcome variables become higher when the brand is seen as cool (vs. less cool)</li></ul></li></ul><ul id="ef40f9da-b771-4dc7-861a-82f44f36e02a" class="bulleted-list"><li>mediation tests<ul id="1e8f4da1-c543-4704-9423-0b78d402d77d" class="bulleted-list"><li>it is nonetheless interesting to test whether the data were consistent with the hypothesis that brand love and SBC mediate the effects of brand coolness on brand attitude, WTP, and WOM</li></ul><ul id="dbb2edea-e9f4-4355-a2d0-bf05925f7f49" class="bulleted-list"><li>estimated SEMs were used to test these hypothesized mediating paths in studies 5,6, and 7</li></ul><ul id="e887aac4-64ab-458c-bb49-e7f0ce01d0c9" class="bulleted-list"><li><strong>results</strong>: <ul id="bae0b569-b163-443b-8a13-5b020237dab1" class="bulleted-list"><li>the effect of higher-order brand coolness on each of the dependent variables—brand attitude, WOM, and WTP—was partially or fully mediated by SBC and brand love in each study and subsample</li></ul><ul id="56383328-28b1-4b4e-81da-188fe4fd4168" class="bulleted-list"><li>brand coolness also directly and significantly influenced brand attitude (.61) and WTP (.65) but not WOM</li></ul></li></ul><ul id="5aa3aaba-8a80-4927-900d-9ba6ce6ddff9" class="bulleted-list"><li><strong>summary</strong>:<ul id="15b00125-d984-4fac-aeec-a35bbc652430" class="bulleted-list"><li>brand love fully mediated the effects of brand coolness on WOM, but partially mediated the effects of brand coolness on brand attitude and WTP</li></ul><ul id="22cbdb8e-5c31-4ebc-ba7e-0c27e783b9cb" class="bulleted-list"><li>this pattern of mediation supports the conceptual argument that brand coolness, which a consumer perceives in a brand, is an antecedent to constructs such as brand love and SBC, which are a consumer&#x27;s evaluative response to a brand that result from the properties perceived in the brand</li></ul></li></ul></li></ul></details></li></ul><ul id="eba33dd7-6af7-4059-b1da-3dee6e7b0321" class="toggle"><li><details open=""><summary><em>METHODS FACTOR TESTS</em></summary><ul id="52da8e08-10b0-44c4-8b81-0c7d6992144e" class="bulleted-list"><li>in this research, the degree to which common method bias affected our structural and measurement models in studies 7 an d8 using the well-accepted &quot;marker variables&quot; technique presented in Williams, Hartman, and Cavazotte (2010)</li></ul><ul id="e12ee2da-d794-49e8-a8f7-24f8fcfdd818" class="bulleted-list"><li>as marker variables, respondents were asked about their experience with and expectations of service quality in restaurants (four items), which are not meaningfully related, in either a theoretical or empirical sense, to the constructs of interest in this research</li></ul><ul id="c569e9ac-376e-4e6a-a930-8d120f8987a4" class="bulleted-list"><li>details of these methods factor tests appear in Web Appendix I</li></ul><ul id="79dff0b2-8fe3-4b5d-b7ef-a6723115a8ea" class="bulleted-list"><li>these tests showed that the marker variable approach to test for method bias did not indicate problems in these two studies</li></ul></details></li></ul><ul id="c2854ddb-c6a6-4119-8303-fb497380f315" class="toggle"><li><details open=""><summary><em>HOW DO BRANDS CHANGE AS THEY MORE FROM NICHE COOL TO MASS COOL?</em></summary><ul id="8ca4819d-3830-436b-be24-c9b0b1f00eb7" class="bulleted-list"><li>manipulation checks</li></ul><ul id="1e8f9cf7-10bd-4677-a231-48653f5a171e" class="bulleted-list"><li>cool brands change over time, often spread beyond their niches roots to become cool to the masses</li></ul><ul id="5601840f-ae4a-4716-861c-71994a86c2a5" class="bulleted-list"><li>how do the characteristics associated with cool rands change as they mature from niche cool to mass cool?</li></ul><ul id="f1814adc-8bcf-40ed-b667-9348f6b30cfd" class="bulleted-list"><li>do consumers respond differently to mass cool brands than niche cool brands?</li></ul><ul id="a5ac9836-c13b-4f9e-b5b0-f9899d3d18c5" class="bulleted-list"><li>study 8 attempted to answer these questions by investigating how consumers in the urban streetwear subculture perceive both brands that they themselves think are cool but have not yet caught on outside of the streetwear apparel subculture (niche cool brands) and brands that have become cool to a broader audience (mass cool brands)</li></ul><ul id="238208c5-f05d-4add-83b9-fb777e358129" class="bulleted-list"><li>to analyze the data, they examined the differences between the three experimental conditions (niche cool, mass cool, and uncool) using two planned, orthogonal contrasts<ul id="bb1ad64e-c64c-4838-b6a4-2da097656168" class="bulleted-list"><li>examined the difference between cool and uncool brands by comparing the ratings of the uncool brand with the average of the ratings for the mass cool and niche cool brands</li></ul><ul id="a4270531-208b-4753-9ad1-cf66db760361" class="bulleted-list"><li>examined the difference between the mass cool and niche cool brands</li></ul></li></ul><ul id="02f2b6cf-4b0a-4999-8a4c-c75b61998d81" class="bulleted-list"><li><em>Manipulation Checks</em><ul id="afb80de0-0404-4a0f-a65c-e04066eb26ee" class="bulleted-list"><li>the brand manipulation successfully elicited different types of brands from the participants (Table 4)</li></ul><ul id="70c18d64-155a-453b-9fa0-d8ccf3aff368" class="bulleted-list"><li>participants perceived the uncool brands to be less cool than mass cool and niche cool brands, both to themselves personally (t=14.32, p &lt; .001) and in the eyes of others (t=9.77, p &lt; .001)</li></ul><ul id="52d21f01-5a7a-44b3-9b89-fc7acc7d5860" class="bulleted-list"><li>the correlations between the measures of how participants personally rated the brand&#x27;s coolness with how cool they thought others perceived the brand to be was only .50, which offers additional evidence that perceptions of brand coolness are subjective</li></ul><ul id="e313d11a-e77d-499f-abb7-93286a0ca74f" class="bulleted-list"><li>the niche and mass cool brands also differed, as intended</li></ul><ul id="b7d2b428-1ca7-4ddb-aae3-ab33e4bb719f" class="bulleted-list"><li>participants perceived the niche cool brands to be more cool to themselves personally (t=4.41, p &lt; .001) but less cool to others (t=-4.68, p &lt; .001)</li></ul><ul id="e192a27e-ee16-4163-a3da-a0919d5f1132" class="bulleted-list"><li>participants also predicted a different future trajectory for the brands</li></ul><ul id="e4430445-5cb6-44c3-ad82-11bff33513d4" class="bulleted-list"><li>consistent with theory predicting that niche cool brands become cooler to a broader population over time, participants expected the niche cool brands to become cooler in the future, compared with the scale midpoint, the mass cool brand, and the uncool brand (</li></ul></li></ul><ul id="9496d918-9149-46b9-89e7-baf48ce6b010" class="bulleted-list"><li><em>Differences Between Cool (mass and niche) and uncool brands</em></li></ul><ul id="be33d97f-0610-427e-b373-8a1eb96e59a8" class="bulleted-list"><li><em>Differences Between mass and niche cool brands</em></li></ul></details></li></ul></details></li></ul><hr id="f4bdf014-d36e-45a2-9e99-6ed7b829a2ff"/><ul id="6d8680fc-fb1c-442b-a842-9850cbdaca23" class="toggle"><li><details open=""><summary><strong>EXPERIMENT: MANIPULATING THE CHARACTERISTICS OF COOL BRANDS</strong></summary><ul id="68f188f7-8436-4ed7-9780-55cff4fb5924" class="bulleted-list"><li>this study have found that cool brands have different characteristics than uncool brands, but have not yet examined whether we can increase the extent to which a brand seems cool by experimentally manipulating the characteristics of brand coolness</li></ul><ul id="06b677c5-66cd-46a7-8e01-9ffcdab29353" class="bulleted-list"><li>in this study, the researcher manipulated the description of a watch brand to orthogonally vary the: <ul id="f7a5bc98-6501-4075-9ac1-0dd352837a62" class="bulleted-list"><li>desirability (i.e., extraordinariness, aesthetic appeal, and excitement), </li></ul><ul id="8ebda3c9-2e0e-4376-8289-de980813360f" class="bulleted-list"><li>positive autonomy (i.e., originality and authenticity)</li></ul><ul id="77b05dc8-f559-4f72-918f-ed92af37a260" class="bulleted-list"><li>rebellion</li></ul><ul id="8a7787d5-4e38-442b-b4ed-5f113f03b4c3" class="bulleted-list"><li>popularity</li></ul></li></ul><ul id="71877ac2-7903-49be-a944-5234978128a7" class="bulleted-list"><li>constraints:<ul id="3cd85b2e-4201-4de7-8577-461df8db19ef" class="bulleted-list"><li>did not manipulate the extent to which the brand seemed iconic or subcultural</li></ul><ul id="1e43f9fd-8955-49c2-b70d-7a679389c437" class="bulleted-list"><li>contrasted the cool with uncool brands rather than distinguishing between mass and niche cool brands</li></ul></li></ul><ul id="a141c210-60a4-448f-a9e7-73e484167b86" class="bulleted-list"><li>single-exposure experiment provides a conservative test of whether the characteristics influence perceptions of brand coolness</li></ul><ul id="d5847748-c567-4daa-a889-18118cf29a73" class="bulleted-list"><li>the study predicted that:<ul id="1bced931-9642-417b-8f04-bdab399a4b99" class="bulleted-list"><li>the brand would seem more cool when participants read that it was more (rather than less) desirable, autonomous, rebellious, popular, and high status</li></ul><ul id="fe3376cc-f35a-4ac7-a690-a3b51541d8b1" class="bulleted-list"><li>coolness would in turn influence participants&#x27; attitudes, WTP for, and likelihood of spreading WOM about the brand</li></ul></li></ul><p id="32599bba-bcdd-4d32-bf92-bcedec456bd9" class=""><em>METHOD</em><div class="indented"><ul id="7a24ff13-370e-4698-aa09-f116695c2523" class="bulleted-list"><li>participants (N: 368, 34% female, mean age 36, all located in the US) from MTurk (Amazon Mechanical Turk)</li></ul><ul id="29491c7b-7df9-4a25-9fea-1f101e53b191" class="bulleted-list"><li>reading check at the beginning, filtered out 11 respondents</li></ul><ul id="1db9a806-2556-4c81-b4ee-63a2cae79179" class="bulleted-list"><li>participants completed the study, titled &quot;Online Review Survey&quot;, in which they were randomly assigned to a condition:<ul id="26c3788b-7312-4d55-8b87-f4f94164adfd" class="bulleted-list"><li>2 (desirability : high, low) x </li></ul><ul id="0efcf9ac-ec7e-4571-838d-6ae3143d23dd" class="bulleted-list"><li>2 (autonomy: high, low) x </li></ul><ul id="baaf75e2-1846-4b61-8163-18a992c2d480" class="bulleted-list"><li>2 (rebellion: high, low) x </li></ul><ul id="57509b37-e4c1-4bab-b5d6-86db78d170c2" class="bulleted-list"><li>2 (status: high, low) x </li></ul><ul id="6724ac2c-3a21-482b-a207-aa41408ecf9e" class="bulleted-list"><li>2 (popularity: high, low) between-subjects experiment</li></ul></li></ul><ul id="d05dd749-20e1-4dbf-947f-4d70736b5826" class="bulleted-list"><li>participants subsequently completed a series of measures, including brand coolness, brand attitude, WTP, WOM, effectiveness of the manipulations using the full brand coolness scale from Studies 6-8, age, gender, and native language</li></ul></div></p><p id="639154ca-2d75-4f6e-b21c-05128daf5cd4" class=""><em>RESULTS</em></p><ul id="24b7b1fc-0999-4ff5-9126-f78af7f75bc7" class="toggle"><li><details open=""><summary>brand coolness</summary><ul id="0616fb01-f574-4f2f-981e-491d939b89f9" class="bulleted-list"><li>the analysis revealed main effects of:<ul id="6e51d0a1-f7e3-46ed-ab9a-4589ce0b1f40" class="bulleted-list"><li>desirability</li></ul><figure id="cd49bf8d-4aa7-4f2a-a620-e24390ccf00d" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mn>336</mn><mo>)</mo><mo>=</mo><mn>35.73</mn><mo separator="true">,</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">.</mi><mn>001</mn><mo separator="true">,</mo><msup><mi>n</mi><mn>2</mn></msup><mo>=</mo><mi mathvariant="normal">.</mi><mn>096</mn></mrow><annotation encoding="application/x-tex">F(1,336) = 35.73, p &lt; .001, n^2 = .096</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mord">3</span><span class="mord">6</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">3</span><span class="mord">5</span><span class="mord">.</span><span class="mord">7</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0585479999999998em;vertical-align:-0.19444em;"></span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">0</span><span class="mord">9</span><span class="mord">6</span></span></span></span></span></div></figure><ul id="1d651bdb-e55b-4ced-b05e-312b440c5726" class="bulleted-list"><li>autonomy</li></ul><figure id="46db9073-e69d-4be7-9918-2bf09b5ec421" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mn>336</mn><mo>)</mo><mo>=</mo><mn>59.90</mn><mo separator="true">,</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">.</mi><mn>001</mn><mo separator="true">,</mo><msup><mi>n</mi><mn>2</mn></msup><mo>=</mo><mi mathvariant="normal">.</mi><mn>151</mn></mrow><annotation encoding="application/x-tex">F(1,336) = 59.90, p &lt; .001, n^2 = .151</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mord">3</span><span class="mord">6</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">5</span><span class="mord">9</span><span class="mord">.</span><span class="mord">9</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0585479999999998em;vertical-align:-0.19444em;"></span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">1</span><span class="mord">5</span><span class="mord">1</span></span></span></span></span></div></figure><ul id="e24da10a-0f52-427d-a515-ac09bdedf165" class="bulleted-list"><li>status</li></ul><figure id="e431205c-3102-4995-9651-d3b2b4687007" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mn>336</mn><mo>)</mo><mo>=</mo><mn>10.85</mn><mo separator="true">,</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">.</mi><mn>001</mn><mo separator="true">,</mo><msup><mi>n</mi><mn>2</mn></msup><mo>=</mo><mi mathvariant="normal">.</mi><mn>031</mn></mrow><annotation encoding="application/x-tex">F(1,336) = 10.85, p &lt; .001, n^2 = .031</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mord">3</span><span class="mord">6</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">.</span><span class="mord">8</span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0585479999999998em;vertical-align:-0.19444em;"></span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">0</span><span class="mord">3</span><span class="mord">1</span></span></span></span></span></div></figure><ul id="18937a18-99ab-4f0c-8e5f-302e28ec2750" class="bulleted-list"><li>popularity</li></ul><figure id="e07ccd99-2a49-4cb6-b7c8-d6d8dfc4dc16" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mn>336</mn><mo>)</mo><mo>=</mo><mn>33.69</mn><mo separator="true">,</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">.</mi><mn>001</mn><mo separator="true">,</mo><msup><mi>n</mi><mn>2</mn></msup><mo>=</mo><mi mathvariant="normal">.</mi><mn>091</mn></mrow><annotation encoding="application/x-tex">F(1,336) = 33.69, p &lt; .001, n^2 = .091</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mord">3</span><span class="mord">6</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">3</span><span class="mord">3</span><span class="mord">.</span><span class="mord">6</span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0585479999999998em;vertical-align:-0.19444em;"></span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">0</span><span class="mord">9</span><span class="mord">1</span></span></span></span></span></div></figure><ul id="fbea7b65-ddb1-45a4-bcef-1bb93881805d" class="bulleted-list"><li>rebellion</li></ul><figure id="53f961b4-a556-48f9-b8c1-2eb7824e992f" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mn>336</mn><mo>)</mo><mo>=</mo><mn>7.51</mn><mo separator="true">,</mo><mi>p</mi><mo>=</mo><mi mathvariant="normal">.</mi><mn>006</mn><mo separator="true">,</mo><msup><mi>n</mi><mn>2</mn></msup><mo>=</mo><mn>0.22</mn></mrow><annotation encoding="application/x-tex">F(1,336) = 7.51, p = .006, n^2 = 0.22</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mord">3</span><span class="mord">6</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">7</span><span class="mord">.</span><span class="mord">5</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0585479999999998em;vertical-align:-0.19444em;"></span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">2</span><span class="mord">2</span></span></span></span></span></div></figure></li></ul><ul id="9c9f9f3a-d57a-407c-88b8-e582ed657e9d" class="bulleted-list"><li>participants perceived the brand to be more cool when it was described as: <ul id="7e52c9bf-02ad-49d5-9351-fa5d8ff02f63" class="bulleted-list"><li>being desirable (M = 4.26 vs. M = 3.27)</li></ul><ul id="5ca44cfe-68dc-4653-afc0-01401bb6e9be" class="bulleted-list"><li>autonomous (M = 4.41 vs. M = 3.15)</li></ul><ul id="e89d4115-1359-40b0-a90b-155bcf269e88" class="bulleted-list"><li>high status (M = 4.01 vs. M = 3.54)</li></ul><ul id="3a4af628-bb24-4ecb-8385-53aebcbb669c" class="bulleted-list"><li>popular (M = 4.25 vs. M = 3.29)</li></ul><ul id="8e4c8870-2b0c-4bd8-aed3-de85c6d278d8" class="bulleted-list"><li>rebellious (M = 3.98 vs. M = 3.56) </li></ul><ul id="5c243388-6e01-401f-b493-ca30fe963744" class="bulleted-list"><li>than when it lacked these qualities</li></ul></li></ul><ul id="ad93ad30-f28e-48e3-8652-9588d85c5334" class="bulleted-list"><li>none of the interactions were significant, which suggests that each characteristic additively influences perceived coolness</li></ul></details></li></ul><ul id="825af102-b375-4466-ab1c-3fa3793a2b04" class="toggle"><li><details open=""><summary>indirect effects on attitude, WTP, and WOM</summary><ul id="49b55096-4d46-4a82-9bec-177a4c2bbc62" class="bulleted-list"><li>one comprehensive SEM path model using LISREL (n = 368) were used, which allowed for all direct and indirect effects</li></ul><ul id="8125c861-00ae-4805-9485-c0b963a6c61a" class="bulleted-list"><li>brand coolness, in turn, significantly influenced the three dependent variables: brand attitude (.84), WTP (.54), and WOM (.82)</li></ul><ul id="2ca0cd03-f7e6-41bb-b7f7-e7653cbfc319" class="bulleted-list"><li>the effect of desirability, autonomy, popularity, status, and rebellion on the three dependent variables was at least partially mediated by brand coolness in each case</li></ul><ul id="d412b02b-f446-4cee-8492-05b08ac0db5c" class="bulleted-list"><li>however, some significant direct effects of the manipulated brand characteristics on the dependent variables also emerged, though these direct effects are hard to interpret because of possible multicollinearity, remaining measurement error, or omitted mediators</li></ul></details></li></ul><p id="9fe6d0c6-10ab-448d-baec-3853073d7961" class=""><em>DISCUSSION</em></p><ul id="df0bb222-fd06-4281-998e-c5fd7c3799c1" class="bulleted-list"><li>the experiment confirmed that increasing the extent to which a brand seems desirable, autonomous, rebellious, high status, and popular increases the extent to which it is perceived to be cool</li></ul><ul id="e9094259-dbea-4839-ac5f-a8b7efb20980" class="bulleted-list"><li>brand coolness, in turn, influences several consequence vari- ables, including the extent to which consumers hold a favorable attitude toward the brand as well as their WTP for and willing- ness to discuss the brand with others</li></ul><ul id="9fe08dd3-36f5-4ac4-8ec1-0442e140a495" class="bulleted-list"><li>the experiment suggests that the effects of the characteristics of brand coolness on overall perceptions of coolness and on its downstream con- sequences (e.g., brand attitudes) are additive, though future research will need to further explore factors that moderate or interact with the different characteristics of brand coolness</li></ul></details></li></ul><hr id="a3100b62-a078-4241-8e0a-2f92a9225a12"/><ul id="adee9603-2908-4fed-92ba-e0bb368f4a47" class="toggle"><li><details open=""><summary><strong>GENERAL DISCUSSION</strong></summary><p id="fc8a712a-5c11-4872-a3ae-a54b3292ba1e" class=""><em>THE LIFE CYCLE OF COOLNESS</em></p><ul id="2d9d0164-f1cf-4849-b4e7-52ad19095404" class="bulleted-list"><li>this research additionally contributes to theory on the dynamic nature of coolness (e.g., Gladwell 1997) and brands (e.g., Parmentier and Fischer 2014) by exploring how the characteristics of cool brands change as a brand becomes niche cool, transitions from niche to mass cool, and eventually begins to lose its cool</li></ul><figure id="8ae226ac-fbc2-4652-9b7c-9289eac60b01" class="image"><a href="Brand%20Coolness/Screen_Shot_2020-04-30_at_19.23.07.png"><img style="width:624px" src="Brand%20Coolness/Screen_Shot_2020-04-30_at_19.23.07.png"/></a></figure><p id="dea654c5-619a-4d9e-8756-2084b6b50d0a" class=""><em>MANAGERIAL IMPLICATIONS</em></p><ul id="0ba6163d-c234-4ca9-b1ff-f0597ce54911" class="bulleted-list"><li>for many product categories and consumer segments, a brand’s perceived coolness is an important factor in driving its success, and managers have long sought to figure out how to give their brands this mysterious quality</li></ul><ul id="662f57bd-ed13-4552-a8f2-6ae3b64aa147" class="bulleted-list"><li>the research resulting a scale provides a valuable tool for helping firms create and manage cool brands</li></ul><ul id="2e744bd2-afa3-4326-828b-3f15b360d868" class="bulleted-list"><li>the scale components can also be used for pretesting and evaluating different marketing and communication programs that are designed to increase or maintain a brand’s perceived coolness</li></ul><ul id="47607d37-b922-4a4a-8b7f-dd68f61fa6e9" class="bulleted-list"><li>how should managers respond if their brand is not scoring high enough on one or more component characteristics of brand coolness? they will need to reinforce the image of the band on the characteristic or characteristics it is lacking</li></ul><ul id="f963f9ba-c2d8-42d6-bc5b-4c1646e03f9e" class="bulleted-list"><li>firms will also need to assess whether their brand is currently niche cool, mass cool, or uncool to understand how to best manage the brand’s characteristics</li></ul><p id="fff65ea1-0544-4742-90f9-e37b65456d37" class=""><em>LIMITATIONS AND FUTURE RESEARCH OPPORTUNITIES</em><div class="indented"><p id="5ede8e27-b79e-4490-aa92-cdcbd7b730c2" class="">many important questions remain for future research</p><ul id="570f2d0d-221f-4d19-bab0-47fa632a3afe" class="bulleted-list"><li>how brand coolness relates to nomologically related constructs, especially brand personality</li></ul><ul id="a8225e6c-b77d-4cf7-9741-cf94732e061a" class="bulleted-list"><li>this study did not have access to multitrait-multimethod data, which are necessary for more definitive conclusions in this regard, as well as for a stronger estimate of common methods bias</li></ul><ul id="42ed0554-0443-4154-b7cf-20fbef7d4f6c" class="bulleted-list"><li>this study did not formally investigate cross-cultural differences</li></ul><ul id="eb2d919b-db9d-4868-a14f-33e6ec15fefc" class="bulleted-list"><li>examine the relationship between the specific coolness components, overall brand cool- ness, and downstream consequences such as brand attitudes, WOM, and WTP</li></ul></div></p></details></li></ul><h1 id="a977be4c-b650-4ba0-9e58-eea0fd954c6c" class=""><mark class="highlight-purple"><strong>Thank you!</strong></mark></h1></div></article></body></html>
